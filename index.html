@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZetwalCoin</title>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+    }
+    header, nav, footer, section {
+      animation: fadeIn 0.8s ease-in;
+    }
+    header {
+      background-color: #111;
+      padding: 30px 15px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #1a1a1a;
+      border-bottom: 2px solid #444;
+    }
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      padding: 15px 20px;
+      font-weight: bold;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    nav button:hover {
+      background-color: #333;
+      transform: scale(1.05);
+    }
+    .content {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    h2 {
+      color: #ffd700;
+      font-size: 2em;
+    }
+    .cta-button {
+      background-color: #ffd700;
+      color: #111;
+      padding: 10px 20px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      margin-top: 10px;
+      display: inline-block;
+    }
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    .socials a {
+      margin: 0 10px;
+      color: white;
+      font-size: 1.8em;
+      text-decoration: none;
+    }
+    #user-map {
+      width: 100%;
+      height: 500px;
+      margin-top: 20px;
+      background-color: #222;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ZetwalCoin</h1>
+  </header>
+  <nav>
+    <button onclick="scrollToSection('home')">Accueil</button>
+    <button onclick="scrollToSection('about')">À propos</button>
+    <button onclick="scrollToSection('buy')">Acheter</button>
+    <button onclick="scrollToSection('roadmap')">Roadmap</button>
+    <button onclick="scrollToSection('whitepaper')">Whitepaper</button>
+    <button onclick="scrollToSection('team')">Équipe</button>
+    <button onclick="scrollToSection('map')">Carte</button>
+    <button onclick="scrollToSection('blog')">Blog</button>
+    <button onclick="scrollToSection('community')">Communauté</button>
+    <button onclick="scrollToSection('faq')">FAQ</button>
+    <button onclick="scrollToSection('contact')">Contact</button>
+    <button onclick="scrollToSection('legal')">Mentions légales</button>
+  </nav>
+  <div class="content">
+    <section id="home">
+      <h2>Bienvenue sur ZetwalCoin</h2>
+      <p>La crypto des étoiles pour un avenir brillant.</p>
+      <a href="#" class="cta-button">Acheter ZetwalCoin</a>
+    </section>
+
+    <section id="about">
+      <h2>À propos de ZetwalCoin</h2>
+      <p>ZetwalCoin est une monnaie numérique conçue pour connecter les rêves aux opportunités financières modernes. Accessible, rapide et sécurisée.</p>
+    </section>
+
+    <section id="buy">
+      <h2>Comment acheter ZetwalCoin</h2>
+      <p>Vous pouvez acheter ZetwalCoin via notre application ou avec Binance, Metamask et d'autres portefeuilles connectés.</p>
+    </section>
+
+    <section id="roadmap">
+      <h2>Roadmap</h2>
+      <ul>
+        <li>Q2 2025 – Lancement du site officiel</li>
+        <li>Q3 2025 – Intégration avec Binance Smart Chain</li>
+        <li>Q4 2025 – Lancement de l'application mobile</li>
+        <li>Q1 2026 – Introduction des cartes virtuelles</li>
+      </ul>
+    </section>
+
+    <section id="whitepaper">
+      <h2>Whitepaper</h2>
+      <p>Notre livre blanc officiel sera bientôt disponible ici. Il présentera notre vision, les cas d’usage, la technologie et l'économie du token ZetwalCoin.</p>
+      <a href="#" class="cta-button">Télécharger le Whitepaper</a>
+    </section>
+
+    <section id="team">
+      <h2>Notre équipe</h2>
+      <p>Une équipe haïtienne et internationale dédiée à la technologie blockchain et à l'inclusion financière.</p>
+    </section>
+
+    <section id="map">
+      <h2>Carte des utilisateurs ZetwalCoin</h2>
+      <div id="user-map"></div>
+    </section>
+
+    <section id="blog">
+      <h2>Actualités & Blog</h2>
+      <article>
+        <h3>Lancement officiel de ZetwalCoin</h3>
+        <p>Nous sommes heureux d'annoncer le lancement officiel de ZetwalCoin...</p>
+      </article>
+    </section>
+
+    <section id="community">
+      <h2>Rejoignez la Communauté ZetwalCoin</h2>
+      <p>Participez à l'aventure ! Rejoignez notre communauté :</p>
+      <a href="#" class="cta-button">Telegram</a>
+      <a href="#" class="cta-button">WhatsApp</a>
+      <a href="#" class="cta-button">Discord</a>
+      <a href="#" class="cta-button">Twitter</a>
+    </section>
+
+    <section id="faq">
+      <h2>FAQ – Questions fréquentes</h2>
+      <p><strong>Comment acheter ZetwalCoin ?</strong> Vous pouvez acheter via notre app ou un portefeuille comme Metamask.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contactez-nous</h2>
+      <form action="https://formspree.io/f/mayrzzny" method="POST">
+        <label>Nom :</label><br>
+        <input type="text" name="nom" required style="width:100%; padding:10px; margin:5px 0;"><br>
+        <label>Email :</label><br>
+        <input type="email" name="email" required style="width:100%; padding:10px; margin:5px 0;"><br>
+        <label>Message :</label><br>
+        <textarea name="message" rows="5" required style="width:100%; padding:10px; margin:5px 0;"></textarea><br>
+        <input type="submit" value="Envoyer" class="cta-button">
+      </form>
+    </section>
+
+    <section id="legal">
+      <h2>Mentions Légales & Confidentialité</h2>
+      <p><strong>Éditeur :</strong> ZetwalCoin – contact@zetwalcoin.com</p>
+      <p><strong>Données :</strong> Aucune donnée collectée sans consentement. Emails uniquement pour répondre.</p>
+    </section>
+  </div>
+  <footer>
+    <p>&copy; 2025 ZetwalCoin. Tous droits réservés.</p>
+    <div class="socials">
+      <a href="#" title="Instagram">📸</a>
+      <a href="#" title="Facebook">📘</a>
+      <a href="#" title="TikTok">🎵</a>
+      <a href="#" title="WhatsApp">💬</a>
+      <a href="#" title="Telegram">✈️</a>
+    </div>
+    <div class="created-by">Created by NegFutur</div>
+  </footer>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    var chart = echarts.init(document.getElementById('user-map'));
+    chart.setOption({
+      title: { text: 'Utilisateurs ZetwalCoin', textStyle: { color: '#fff' }, left: 'center' },
+      tooltip: { trigger: 'item' },
+      visualMap: {
+        min: 0,
+        max: 100,
+        left: 'left',
+        bottom: '10%',
+        text: ['+ utilisateurs', '- utilisateurs'],
+        inRange: { color: ['#e0ffff', '#006edd'] },
+        textStyle: { color: '#fff' }
+      },
+      series: [{
+        name: 'Utilisateurs',
+        type: 'map',
+        map: 'world',
+        roam: true,
+        emphasis: { label: { show: true } },
+        data: [
+          { name: 'Haiti', value: 80 },
+          { name: 'Dominican Republic', value: 50 },
+          { name: 'United States', value: 60 },
+          { name: 'France', value: 40 }
+        ]
+      }]
+    });
+  </script>
+</body>
+</html>
+
