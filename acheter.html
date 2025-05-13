@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acheter ZetwalCoin</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+    h2 {
+      color: #ffd700;
+      margin-bottom: 20px;
+    }
+    .buy-button {
+      display: block;
+      background-color: #ffd700;
+      color: #111;
+      padding: 14px 20px;
+      margin: 15px auto;
+      width: 80%;
+      max-width: 400px;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .buy-button:hover {
+      background-color: #fff700;
+    }
+  </style>
+</head>
+<body>
+  <h2>Choisissez votre plateforme d’achat ZetwalCoin</h2>
+
+  <button class="buy-button" onclick="window.open('https://metamask.io/download/', '_blank')">
+    🦊 Acheter via MetaMask
+  </button>
+
+  <button class="buy-button" onclick="window.open('https://trustwallet.com/', '_blank')">
+    🔐 Acheter via Trust Wallet
+  </button>
+
+  <button class="buy-button" onclick="window.open('https://app.uniswap.org/swap?outputCurrency=0xVOTREADRESSEZETWAL', '_blank')">
+    🔗 Acheter via Uniswap (Blockchain Ethereum)
+  </button>
+
+  <button class="buy-button" onclick="alert('💳 Bientôt disponible avec carte bancaire (Stripe, Binance Pay...)')">
+    💳 Acheter avec carte bancaire (bientôt disponible)
+  </button>
+</body>
+</html>
