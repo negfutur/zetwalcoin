@@ -212,20 +212,110 @@ ou garder car son objectif, en tant que réserve de valeur, est d’augmenter en
 </section>
 
         
-<section id="contact" style="margin-top: 60px; padding: 10px; background: #1e2a38; border-radius: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
-  <h2>Contactez-nous</h2>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacter Nous</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f2027;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
 
-  <form action="https://formsubmit.io/send/zetwalcoin.app@gmail.com" method="POST">
-  <input type="hidden" name="_redirect" value="https://zetwalcoin.com/merci.html">
-  <input type="hidden" name="_captcha" value="true">
-  <input type="text" name="_formsubmit_id" style="display:none">
+    .contact-container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: #1a1a1a;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+    }
 
-  <input type="text" name="nom" required placeholder="Nom"><br>
-  <input type="email" name="email" required placeholder="Email"><br>
-  <textarea name="message" required placeholder="Votre message..."></textarea><br>
+    .contact-container h2 {
+      text-align: center;
+      color: #ffd700;
+      margin-bottom: 20px;
+    }
 
-  <input type="submit" value="Envoyer">
-</form>
+    .contact-container label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+
+    .contact-container input,
+    .contact-container textarea {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background-color: #333;
+      color: #fff;
+    }
+
+    .contact-container button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #ffd700;
+      color: #111;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-container button:hover {
+      background-color: #e6c200;
+    }
+
+    .success-message {
+      margin-top: 15px;
+      color: #0f0;
+      text-align: center;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contact-container">
+    <h2>Contacter Nous</h2>
+    <form id="contactForm">
+      <label for="name">Nom</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Envoyer</button>
+    </form>
+    <div class="success-message" id="successMessage">Message envoyé avec succès !</div>
+  </div>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('successMessage').style.display = 'block';
+      this.reset();
+      setTimeout(() => {
+        document.getElementById('successMessage').style.display = 'none';
+      }, 5000);
+    });
+  </script>
+
+</body>
+</html>
+
 
   
     <section id="legal">
