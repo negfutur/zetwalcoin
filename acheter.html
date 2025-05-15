@@ -1,29 +1,89 @@
-<h2>Choisissez votre plateforme d’achat</h2>
+<!DOCTYPE html><html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acheter ZetwalCoin</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+    h2 {
+      color: #ffd700;
+      margin-bottom: 10px;
+    }
+    p.description {
+      font-size: 1.05em;
+      margin-bottom: 30px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .buy-button, .back-button, .donate-button, .refer-button, .donate-main-button, .copy-btn {
+      display: block;
+      background-color: #ffd700;
+      color: #111;
+      padding: 14px 20px;
+      margin: 15px auto;
+      width: 80%;
+      max-width: 400px;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .buy-button:hover, .back-button:hover, .donate-button:hover, .refer-button:hover, .donate-main-button:hover, .copy-btn:hover {
+      background-color: #fff700;
+    }
+    .donation-section {
+      background: #1e2a38;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+    .donation-section p {
+      font-size: 0.95em;
+      margin: 5px 0;
+    }
+    .wallet-address {
+      font-weight: bold;
+      color: #ffd700;
+    }
+  </style>
+</head>
+<body>
+  <h2>Achetez vos ZetwalCoin facilement</h2>
+  <p class="description">
+    Bienvenue dans la section d'achat de ZetwalCoin. Pour commencer, choisissez une des plateformes ci-dessous.<br>
+    Si vous n'avez pas encore de wallet crypto, créez un compte sur l'une des applications proposées (MetaMask, Trust Wallet, etc.)<br>
+    Cliquez sur le bouton de votre choix pour être redirigé vers l'installation ou l'achat.<br>
+    Vous pouvez aussi recommander ZetwalCoin à vos proches ou faire un don en crypto.
+  </p><button class="buy-button" onclick="window.open('https://metamask.io/download/', '_blank')">🦊 Acheter via MetaMask</button> <button class="buy-button" onclick="window.open('https://trustwallet.com/', '_blank')">🔐 Acheter via Trust Wallet</button> <button class="buy-button" onclick="window.open('https://app.uniswap.org/swap?outputCurrency=0xCC859DDf7EE2b489f8bBd4ab13cbd90B2f8DDd32', '_blank')">🔗 Acheter via Uniswap (Blockchain Ethereum)</button>
 
-<button onclick="window.open('https://metamask.io/download/', '_blank')">🦊 Acheter via MetaMask</button>
-<button onclick="window.open('https://trustwallet.com/', '_blank')">🔐 Acheter via Trust Wallet</button>
-<button onclick="window.open('https://pancakeswap.finance/swap?outputCurrency=0xTONZETWAL', '_blank')">🔗 PancakeSwap</button>
-<button onclick="alert('Bientôt disponible')">💳 Acheter avec carte bancaire</button>
-</div><div id="donationSection" class="donation-section" style="background:#1e2a38; padding: 30px; border-radius: 12px; max-width: 600px; margin: 50px auto; text-align: center;">
-  <h3 style="color: #ffd700; font-size: 1.4em;">💖 Faire un don</h3>
-  <p style="font-size: 0.95em; margin-bottom: 20px;">Merci de soutenir ZetwalCoin ! Vous pouvez envoyer un don en crypto à l'une des adresses suivantes :</p>
-  <div style="background:#2c3e50; padding: 15px; border-radius: 8px; word-break: break-all;">
-    <strong style="color:#ffd700;">Ethereum :</strong>
-    <div id="ethAddress" style="margin: 5px 0; color: #fff; font-size: 0.9em;">0x5ba5c05cb0c5a1206013204dcd1e52f6d359ceb9</div>
+<button class="refer-button" onclick="alert('Fonction de parrainage à venir')">🌟 J'ai déjà des ZetwalCoin – Recommander à d'autres</button>
+
+<button class="donate-main-button" onclick="document.getElementById('donationSection').scrollIntoView({ behavior: 'smooth' })">💖 Faire un don</button>
+
+  <div id="donationSection" class="donation-section">
+    <h3>💖 Faire un don</h3>
+    <p>Merci de soutenir ZetwalCoin ! Vous pouvez envoyer un don en crypto à l'une des adresses suivantes :</p>
+    <p>Ethereum : <span class="wallet-address" id="ethAddress">0x5ba5c05cb0c5a1206013204dcd1e52f6d359ceb9</span></p>
     <button class="copy-btn" onclick="copyToClipboard('ethAddress')">📋 Copier l'adresse Ethereum</button>
-  </div>
-  <div style="background:#2c3e50; padding: 15px; border-radius: 8px; margin-top: 15px; word-break: break-all;">
-    <strong style="color:#ffd700;">Bitcoin :</strong>
-    <div id="btcAddress" style="margin: 5px 0; color: #fff; font-size: 0.9em;">3HEQF6a7CHM16TSKwrKo2vbdHdg4CbKyka</div>
+    <p>Bitcoin : <span class="wallet-address" id="btcAddress">3HEQF6a7CHM16TSKwrKo2vbdHdg4CbKyka</span></p>
     <button class="copy-btn" onclick="copyToClipboard('btcAddress')">📋 Copier l'adresse Bitcoin</button>
-  </div>
-  <button class="donate-button" onclick="alert('Merci pour votre soutien !')" style="margin-top: 20px;">📤 Faire un don maintenant</button>
-</div><script>
-  function copyToClipboard(id) {
-    const text = document.getElementById(id).innerText;
-    navigator.clipboard.writeText(text).then(() => {
-      alert("Adresse copiée : " + text);
-    });
-  }
-</script></body>
+    <button class="donate-button" onclick="alert('Merci pour votre soutien !')">📤 Faire un don maintenant</button>
+  </div><button class="back-button" onclick="window.location.href='index.html'">⬅️ Retour à l'accueil</button>
+
+  <script>
+    function copyToClipboard(id) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Adresse copiée : " + text);
+      });
+    }
+  </script></body>
 </html>
