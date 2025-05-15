@@ -212,29 +212,24 @@ ou garder car son objectif, en tant que réserve de valeur, est d’augmenter en
 </section>
 
 <section id="contact" style="margin-top: 60px; padding: 20px; background: #1e2a38; border-radius: 10px; max-width: 600px; margin-left: auto; margin-right: auto;">
-<section id="contact" style="margin-top: 60px; padding: 20px; background: #1e2a38; border-radius: 10px; max-width: 600px; margin-left: auto; margin-right: auto;">
+<section id="contact">
   <h2>Contactez-nous</h2>
 
   <form action="https://formsubmit.io/send/contact@zetwalcoin.com" method="POST">
-    <!-- Redirection après envoi -->
     <input type="hidden" name="_redirect" value="https://zetwalcoin.com/merci.html">
     <input type="hidden" name="_captcha" value="false">
 
     <label for="nom">Nom :</label><br>
-    <input type="text" id="nom" name="nom" required style="width:100%; padding:10px; margin:5px 0;"><br>
+    <input type="text" name="nom" required><br>
 
     <label for="email">Email :</label><br>
-    <input type="email" id="email" name="email" required style="width:100%; padding:10px; margin:5px 0;"><br>
+    <input type="email" name="email" required><br>
 
     <label for="message">Message :</label><br>
-    <textarea id="message" name="message" rows="5" required style="width:100%; padding:10px; margin:5px 0;"></textarea><br>
+    <textarea name="message" rows="5" required></textarea><br>
 
-    <input type="submit" value="Envoyer" class="cta-button" style="margin-top: 10px;">
+    <input type="submit" value="Envoyer">
   </form>
-
-  <p style="margin-top:10px; font-size:0.9em; color:#ccc;">
-    Vos messages seront envoyés automatiquement à notre équipe.
-  </p>
 </section>
 
     <section id="legal">
